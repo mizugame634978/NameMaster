@@ -30,14 +30,14 @@ main_frame.grid(row=0,column=0,sticky="nsew")
 
 
 def generat_answer():
-    print("a")
+    #print("a")
     char1 =  entryBox1.get()
 
     str3 = '関数もしくは変数'
     str0 = "ルール0 : 回答は日本語で行ってください,\nルール1 : 私の質問にはトークン数が270以下になるように答えてください,\nルール2 : 「以下のようなものが考えられます」のような前置きは省略してください,\nルール3 : あなたの考えた名前について説明もしてください,\n命令 : 私はプログラムを書いています。以下の" + str3 +"につける名前を３つほど考えてください,\n"+ str3 +":"
     #str02 = "引数の２つの値の最大公倍数を求めるプログラム"
     str1 = str0 + char1 + ","
-    print(str1)
+    #print(str1)
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -46,7 +46,7 @@ def generat_answer():
         max_tokens=300,#トークンを使える数には限りがあるので
         #temperature=0.7,
     )
-    print(response["choices"][0]["message"]["content"]) #返信のみを出力
+    #print(response["choices"][0]["message"]["content"]) #返信のみを出力
     result = str(response["choices"][0]["message"]["content"])
     textBox1.configure(state=tk.NORMAL)#編集できる
     textBox1.insert(tk.END,result)
