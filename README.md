@@ -6,7 +6,8 @@
 1. 起動には```pip install openai```が必要
 # なぜ作ったのか
 普段自分がchatGPTに変数名や関数名を考えてもらうときに少ない文字で聞くと、望んだ答えが１回で帰ってこないことがそこそこあったため。
-
+# 工夫した点
+jsonのような形でプロンプトを作って、それでchatGPTに質問を送った。
 # 実際の画面
 ![image](https://user-images.githubusercontent.com/83535489/230809198-07e63d99-aaba-44ac-ab82-a9345d05418a.png)
 # 参考
