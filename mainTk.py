@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.ttk as ttk
 import openai
-openai.api_key = ""
+openai.api_key = "あなたのopen aiのapiキー"
 
 # GUIアプリケーションの作成#############
 root = tk.Tk()
